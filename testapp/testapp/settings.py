@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-lr5v&yj2r0n7ul1eaf5ek&@z8zvh+be8wv3ijt36y32898x6lh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -76,10 +76,10 @@ load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DATABASE_NAME"),
-        'USER': os.getenv("DATABASE_USER"),
-        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-        'HOST': 'localhost',
+        'NAME': 'testapp',
+        'USER': 'postgres',
+        'PASSWORD': 'test_data123',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
